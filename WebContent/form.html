@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+                 function getNumber(){
+                	 
+                	 var x = document.myform.num1.value;
+                	 var y = document.myform.num2.value;
+                	
+                	 if( x == 0 || y == 0){
+                		 alert("cannot multiply zeros");
+                	    document.myform.num1.value="";
+                	    document.myform.num2.value="";
+                		document.myform.num1.focus();
+                	 }
+                	 else
+                	 alert(x * y);
+                	 document.myform.num1.value="";
+                	 document.myform.num2.value="";
+             		document.myform.num1.focus();
+                 }
+</script>
+
+</head>
+<body>
+<form name="myform">
+Enter a number <input type="text" name="num1" >
+Enter a number <input type="text" name="num2" >
+<input type="button" name="my" value="click" onclick="getNumber()"/>
+</form>
+</body>
+</html>
